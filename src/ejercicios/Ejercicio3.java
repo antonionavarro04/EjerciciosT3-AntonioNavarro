@@ -8,7 +8,7 @@ public class Ejercicio3 {
         // ? Programa que pida un numero al usuario y dibuje un triangulo en funcion de la altura introducida
         // ^ Creamos las variables para la altura y el caracter
         long altura;
-        char caracter = '^';
+        char caracter = '*';
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         Scanner read = new Scanner(System.in).useLocale(Locale.US);
