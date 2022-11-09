@@ -10,6 +10,9 @@ public class Ejercicio3 {
         long altura;
         final char caracter = '*';
 
+        // ^ Creamos una variable para el retraso
+        final int retraso; // ? Funcionalidad extra
+
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
@@ -17,19 +20,40 @@ public class Ejercicio3 {
         System.out.print("Introduce la altura del triangulo: ");
         altura = read.nextLong();
 
-        altura *= 2;
+        // ! Pedimos el retraso al usuario
+        System.out.print("Introduce el delay (ms) ([0] para desactivarlo, [10] recomendado): ");
+        retraso = read.nextInt(); // ? Extra que he agregado
+
+        // ! Multiplicamos la altura x 2
+        altura *= 2; // * Esto lo hago para que el triangulo se dibuje a la altura que correctamente
 
         // ? Salto de Línea Triple
-        System.out.println("\n" + "---------------------------------------" + "\n");
+        System.out.println("\n---------------------------------------\n");
 
         // ! Mediante un bucle for, dibujamos el triangulo
         for (int i = 0; i < altura; i+=2){
+            // ! Calcularemos cuantos caracteres blancos hacen falta para centrar la fila
             for (long blank = (altura - 1); blank > i; blank-=2){
-                System.out.print(" ");
+                System.out.print(" "); // * Imprimimos el espacio en blanco
+
+                // ? Extra que le he agregado
+                try {
+                    Thread.sleep(retraso);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
 
+            // ! Dibujamos la fila, mientras que c sea menor que la cantidad de caracteres que se tienen que imprimir por linea
             for (int c = 0; c < i + 1; c++){
-                System.out.print(caracter);
+                System.out.print(caracter); // * Imprimimos el caracter
+
+                // ? Extra que le he agregado
+                try {
+                    Thread.sleep(retraso);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
             System.out.println(); // * Cambiamos de linea
         }
