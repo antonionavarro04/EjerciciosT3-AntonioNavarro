@@ -8,7 +8,7 @@ public class Ejercicio3 {
         // ? Programa que pida un numero al usuario y dibuje un triangulo en funcion de la altura introducida
         // ^ Creamos las variables para la altura y el caracter
         long altura;
-        char caracter = '*';
+        final char caracter = '█';
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         Scanner read = new Scanner(System.in).useLocale(Locale.US);
@@ -17,11 +17,13 @@ public class Ejercicio3 {
         System.out.print("Introduce la altura del triangulo: ");
         altura = read.nextLong();
 
+        altura *= 2;
+
         // ? Salto de Línea Triple
         System.out.println("\n" + "---------------------------------------" + "\n");
 
         // ! Mediante un bucle for, dibujamos el triangulo
-        for (int i = 0; i < altura; i++){
+        for (int i = 0; i < altura; i+=2){
             for (long blank = (altura - 1); blank > i; blank-=2){
                 System.out.print(" ");
             }
