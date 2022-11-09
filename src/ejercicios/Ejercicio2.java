@@ -7,7 +7,10 @@ public class Ejercicio2 {
     public static void main(String[] args) {
         // ? Programa Java que pida un numero n y diga cuantos numeros primos hay entre 1 y n
         // ^ Creamos las variables para el numero y el contador, asi como otro numero que empezara siendo 2
-        long numero, contador = 0, numero2 = 2;
+        long numero, contador = 0, numero2 = 2; // ? El numero 2 sirve para ir incrementando el numero que empieza en 2 y llegar hasta el numero n
+
+        // ^ Crearemos otra variable que sera el contador de primos
+        long contadorPrimos = 0;
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         Scanner read = new Scanner(System.in).useLocale(Locale.US);
@@ -27,10 +30,18 @@ public class Ejercicio2 {
                     break; // * Si el número no es primo, se sale del bucle
                 }
             }
-            numero2++;
+            numero2++; // * Se suma 1 al numero2
         }
 
+        // ! Invertimos los no primos por los primos
+        contadorPrimos = (numero - contador) - 2; // * Se le resta 2 porque 1 y el numero n no hay que incluirlos
+
         // ! Mostramos el resultado al usuario
-        System.out.println("Entre 1 y " + numero + " hay " + contador + " numeros no primos");
+        System.out.println("Entre 1 y " + numero + " hay " + contadorPrimos + " numeros primos");
+
+        // ^ Cerramos el Scanner
+        read.close();
+
+        // € Hecho por Antonio Navarro
     }
 }
