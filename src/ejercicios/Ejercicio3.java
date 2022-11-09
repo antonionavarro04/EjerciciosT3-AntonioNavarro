@@ -22,10 +22,14 @@ public class Ejercicio3 {
 
         // ! Mediante un bucle for, dibujamos el triangulo
         for (int i = 0; i < altura; i++){
+            for (long blank = (altura - 1); blank > i; blank-=2){
+                System.out.print(" ");
+            }
+
             for (int c = 0; c < i + 1; c++){
                 System.out.print(caracter);
             }
-            System.out.println();
+            System.out.println(); // * Cambiamos de linea
         }
 
         // ^ Cerramos el Scanner
