@@ -11,7 +11,7 @@ public class Ejercicio1 {
         final long INCREMENTO; // * Es final porque no se va a modificar una vez se le asigne un valor
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
-        Scanner read = new Scanner(System.in).useLocale(Locale.US);
+        final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         // ! Pedimos las horas, minutos y segundos al usuario
         System.out.print("Introduce las horas (hh): ");
