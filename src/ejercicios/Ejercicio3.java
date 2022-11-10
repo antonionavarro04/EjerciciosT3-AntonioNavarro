@@ -24,16 +24,13 @@ public class Ejercicio3 {
         System.out.print("Introduce el delay (ms) ([0] para desactivarlo, [10] recomendado): ");
         RETRASO = read.nextShort(); // ? Extra que he agregado
 
-        // ! Multiplicamos la altura x 2
-        altura *= 2; // * Esto lo hago para que el triangulo se dibuje a la altura que corresponde
-
         // ? Salto de Línea Triple
         System.out.println("\n---------------------------------------\n");
 
         // ! Mediante un bucle for, dibujamos el triangulo
-        for (short i = 0; i < altura; i+=2){
+        for (short i = 0; i < altura; i++){
             // ! Calcularemos cuantos caracteres blancos hacen falta para centrar la fila
-            for (int blank = (altura - 1); blank > i; blank-=2){
+            for (int blank = (altura - 1); blank > i; blank--){
                 System.out.print(" "); // * Imprimimos el espacio en blanco
 
                 try { // ? Extra que le he agregado
@@ -46,6 +43,7 @@ public class Ejercicio3 {
             // ! Dibujamos la fila, mientras que c sea menor que la cantidad de caracteres que se tienen que imprimir por linea
             for (short c = 0; c < i + 1; c++){
                 System.out.print(CHAR); // * Imprimimos el caracter
+                System.out.print(" "); // * Imprimimos el espacio en blanco
 
                 try { // ? Extra que le he agregado
                     Thread.sleep(RETRASO);
