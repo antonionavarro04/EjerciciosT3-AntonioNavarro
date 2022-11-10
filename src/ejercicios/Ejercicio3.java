@@ -14,7 +14,7 @@ public class Ejercicio3 {
         final short RETRASO; // ? Funcionalidad extra
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
-        Scanner read = new Scanner(System.in).useLocale(Locale.US);
+        final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         // ! Pedimos la altura al usuario
         System.out.print("Introduce la altura del triangulo: ");
@@ -33,7 +33,7 @@ public class Ejercicio3 {
         // ! Mediante un bucle for, dibujamos el triangulo
         for (short i = 0; i < altura; i+=2){
             // ! Calcularemos cuantos caracteres blancos hacen falta para centrar la fila
-            for (long blank = (altura - 1); blank > i; blank-=2){
+            for (int blank = (altura - 1); blank > i; blank-=2){
                 System.out.print(" "); // * Imprimimos el espacio en blanco
 
                 try { // ? Extra que le he agregado
