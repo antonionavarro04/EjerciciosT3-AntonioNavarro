@@ -25,7 +25,7 @@ public class Ejercicio3 {
         retraso = read.nextInt(); // ? Extra que he agregado
 
         // ! Multiplicamos la altura x 2
-        altura *= 2; // * Esto lo hago para que el triangulo se dibuje a la altura que correctamente
+        altura *= 2; // * Esto lo hago para que el triangulo se dibuje a la altura que corresponde
 
         // ? Salto de Línea Triple
         System.out.println("\n---------------------------------------\n");
