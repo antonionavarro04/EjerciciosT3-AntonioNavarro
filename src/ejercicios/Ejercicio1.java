@@ -41,6 +41,10 @@ public class Ejercicio1 {
             horas++; // * Y sumaremos 1 a las horas
         }
 
+        while (horas > 23){ // ! Mediante un bucle while, comprobamos si las horas son mayores a 23
+            horas -= 24; // * De ser cierto restaremos 24 a las horas
+        }
+
         // ! Mostramos la hora resultante al usuario
         System.out.println("La hora resultante es: " + (horas < 10 ? "0" + horas : horas) + ":" + (minutos < 10 ? "0" + minutos : minutos) + ":" + (segundos < 10 ? "0" + segundos : segundos)); // * Los ternarios sirven para que si la hora es 1:4:9 quede como 01:04:09
 
