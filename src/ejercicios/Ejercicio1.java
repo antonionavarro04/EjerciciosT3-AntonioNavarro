@@ -7,7 +7,8 @@ public class Ejercicio1 {
     public static void main(String[] args) {
         // ? Programa Java que pide una hora en hh:mm:ss y un incremento en segundos y muestra la hora resultante
         // ^ Creamos las variables para las horas, minutos y segundos, asi como el incremento
-        long horas, minutos, segundos, incremento;
+        long horas, minutos, segundos;
+        final long INCREMENTO; // * Es final porque no se va a modificar una vez se le asigne un valor
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         Scanner read = new Scanner(System.in).useLocale(Locale.US);
@@ -22,23 +23,22 @@ public class Ejercicio1 {
 
         // ! Pedimos el incremento al usuario
         System.out.print("Introduce en cuantos segundos quieres incrementar la hora: ");
-        incremento = read.nextLong(); // * Para el incremento
+        INCREMENTO = read.nextLong(); // * Para el incremento
 
         // ? Salto de Línea Triple
-        System.out.println("\n" + "---------------------------------------" + "\n");
+        System.out.println("\n---------------------------------------------------------------\n");
 
         // ! Sumamos el incremento a los segundos
-        segundos += incremento;
+        segundos += INCREMENTO;
 
-        // ! Mediante un bucle while, comprobamos si los segundos son mayores a 60
-        while (segundos > 59){
-            segundos -= 60;
-            minutos++;
+        while (segundos > 59){ // ! Mediante un bucle while, comprobamos si los segundos son mayores a 59
+            segundos -= 60; // * De ser cierto restaremos 60 a los segundos
+            minutos++; // * Y sumaremos 1 a los minutos
+        }
 
-            if (minutos > 59){
-                minutos = 0;
-                horas++;
-            }
+        while (minutos > 59){ // ! Mediante un bucle while, comprobamos si los minutos son mayores a 59
+            minutos -= 60; // * De ser cierto restaremos 60 a los minutos
+            horas++; // * Y sumaremos 1 a las horas
         }
 
         // ! Mostramos la hora resultante al usuario
