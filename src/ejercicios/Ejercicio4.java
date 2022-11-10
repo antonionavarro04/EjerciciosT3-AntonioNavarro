@@ -25,7 +25,7 @@ public class Ejercicio4 {
         System.out.println("\n---------------------------------------\n");
 
         // ! Operador ternario para sobrescribir el valor de divisor
-        divisor = (a > b) ? a : b; // * Si a es mayor que b, divisor es a, si no, divisor es b
+        divisor = (a < b) ? a : b; // * Si a es mayor que b, divisor es a, si no, divisor es b
 
         // ! Mediante un bucle While vamos comprobando si a y b son divisibles entre el divisor
         while (moduloA != 0 || moduloB != 0){
