@@ -7,7 +7,7 @@ public class Ejercicio9 {
     public static void main(String[] args) {
         // ? Programa Java que nos diga cuantos digitos tiene un numero entero positivo introducido por teclado
         // ^ Creamos la variable para n y el contador
-        long n;
+        long n = 0;
 
         // ^ Creamos el contador
         byte contador = 0;
@@ -16,8 +16,10 @@ public class Ejercicio9 {
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         // ! Pedimos el numero al usuario
-        System.out.print("Introduce un numero: ");
-        n = read.nextLong();
+        while (n <= 0){
+            System.out.print("Introduce un numero entero positivo: ");
+            n = read.nextLong();
+        }
 
         // ? Salto de Línea Triple
         System.out.println("\n---------------------------------------\n");
