@@ -10,7 +10,7 @@ public class Ejercicio6 {
         final byte N;
 
         // ^ Creamos la variable incremento y veces
-        byte incremento = 1, veces = 2;
+        byte incremento = 1, veces = 1;
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
@@ -22,18 +22,15 @@ public class Ejercicio6 {
         // ? Salto de Línea Triple
         System.out.println("\n---------------------------------------\n");
 
-        // ! Imprimimos el primer 1
-        System.out.println("1");
-
         // ! Mediante un bucle while imprimiremos los caracteres
         while (veces <= N){
             // ! Mediante un bucle for imprimiremos los caracteres tantas veces el número
-            for (; incremento != (veces + 1); incremento++){
-                System.out.print(veces);
+            for (; incremento <= veces; incremento++){ // * Incrementaremos el incremento hasta que sea igual a veces
+                System.out.print(veces); // * Imprimimos veces ya que es el que contiene el número de la fila
             }
-            System.out.println();
-            veces++;
-            incremento = 1;
+            System.out.println(); // * Cambiamos de Línea
+            incremento = 1; // * Reiniciamos el incremento
+            veces++; // * Incrementamos el número de veces a imprimir
         }
     }
 }
