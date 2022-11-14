@@ -1,3 +1,9 @@
+// TESTS
+// = Habrá que comprobar que no se puede introducir numeros negativos
+// = Si se introduce un numero de 1 digito siempre será capicúa
+// = Si se introduce un numero de 2 digitos las decenas y unidades deben ser iguales para que sea capicua
+// = A partir de los dos digiros deben seguir esta estructura: xyzyx o xyzzyx, ej: 12321, 123321
+
 package ejercicios;
 
 // ? Importamos la clase Scanner y Locale
@@ -21,9 +27,10 @@ public class Ejercicio10 {
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
-        // ! Pedimos el numero al usuario
-        System.out.print("Introduce un numero entero positivo: ");
-        n = read.nextLong();
+        while (n <= 0) { // * n debe ser mayor que 0
+            System.out.print("Introduce un numero entero positivo: ");
+            n = read.nextLong(); // ! Pedimos el numero al usuario
+        } // * Repetiremos el bucle hasta que n sea mayor que 0
 
         // ! Guardamos el numero original
         numeroOriginal = n;
