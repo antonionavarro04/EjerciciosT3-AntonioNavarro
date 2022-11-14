@@ -1,3 +1,10 @@
+// TESTS
+// = Habrá que comprobar que no se puede introducir numeros negativos
+// = Si se introduce 1 deberá decir que tiene 1 digito
+// = Si se introduce 10 deberá decir que tiene 2 digitos
+// = Si se introduce 100 deberá decir que tiene 3 digitos
+// = Y así hasta el límite de long el cual es 9223372036854775807 osease 19 digitos
+
 package ejercicios;
 
 // ? Importamos la clase Scanner y Locale
