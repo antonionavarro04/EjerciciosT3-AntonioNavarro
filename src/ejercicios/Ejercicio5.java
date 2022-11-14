@@ -1,3 +1,8 @@
+// TESTS
+// = Habrá que comprobar que no se pued3en introducir números negativos
+// = Si a es 2 y b es 3 el MCM será 6
+// = Si a es 4 y b es 10 el MCM será 20
+
 package ejercicios;
 
 // ? Importamos la clase Scanner y Locale
