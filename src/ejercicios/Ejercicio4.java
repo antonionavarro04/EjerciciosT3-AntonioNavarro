@@ -31,6 +31,7 @@ public class Ejercicio4 {
             System.out.print("Introduce b: ");
             b = read.nextLong(); // ! Pedimos b al usuario
         } // * Repetiremos el bucle hasta que b sea mayor que 0
+        
         // ? Salto de Línea Triple
         System.out.println("\n---------------------------------------\n");
 
