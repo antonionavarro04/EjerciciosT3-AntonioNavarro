@@ -7,7 +7,7 @@ public class Ejercicio5 {
     public static void main(String[] args) {
         // ? Programa que dado a y b, calcule el MCM de a y b
         // ^ Creamos las variables para a y b
-        final long a, b;
+        long a = 0, b = 0;
 
         // ^ Creamos una variable multiplicador y 2 para los resultados de a y b así como 2 para los multiplicadores de a y b
         final long multiplicador;
@@ -16,17 +16,21 @@ public class Ejercicio5 {
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
-        // ! Pedimos a y b al usuario
-        System.out.print("Introduce a: ");
-        a = read.nextLong(); // * Para a
-        System.out.print("Introduce b: ");
-        b = read.nextLong(); // * Para b
+        while (a < 1) { // * a no puede ser 0 o menos
+            System.out.print("Introduce a: ");
+            a = read.nextLong(); // ! Pedimos a al usuario
+        } // * Repetiremos el bucle hasta que a sea mayor que 0
+        
+        while (b < 1) { // * b no puede ser 0 o menos
+            System.out.print("Introduce b: ");
+            b = read.nextLong(); // ! Pedimos b al usuario
+        } // * Repetiremos el bucle hasta que b sea mayor que 0
 
         // ? Salto de Línea Triple
         System.out.println("\n---------------------------------------\n");
         
         // ! Mediante un operador ternario asignamos el valor de multiplicador
-        multiplicador = (a > b) ? a : b; // * Si a es mayor que b, multiplicador es a, si no, multiplicador es b
+        multiplicador = (a < b) ? a : b; // * Si a es mayor que b, multiplicador es a, si no, multiplicador es b
 
         // ! Igualamos mA y mB a multiplicador
         multiplicadorA = multiplicador; // * Para a
@@ -47,7 +51,7 @@ public class Ejercicio5 {
         }
 
         // ! Imprimimos el MCM
-        System.out.println("El mínimo comun múltiplo de " + a + " y " + b + " es: " + resultadoA);
+        System.out.println("El mínimo comun múltiplo de " + a + " y " + b + " es: " + multiplicadorA);
 
         // ^ Cerramos el Scanner
         read.close();
