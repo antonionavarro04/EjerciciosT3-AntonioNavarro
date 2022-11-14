@@ -1,6 +1,7 @@
 // TESTS
-// = Habrá que comprobar metiendo datos que se encuentren dentro de rango, ej: hh; -90: mm; 153 ss; -1 ii; -90
+// = Habrá que comprobar metiendo datos que se encuentren dentro de rango, ej: hh; -90: mm; 153 ss; -1 ii; -90 no estan bien introducidos
 // = La hora resultante deberá corresponderse con la hora introducida y el incremento
+// = Si introduces 23:59:59 y le sumas 1, deberá dar 00:00:00, así como si no sumas nada se debe quedar igual
 
 package ejercicios;
 
