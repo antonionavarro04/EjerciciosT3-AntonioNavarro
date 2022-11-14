@@ -1,5 +1,5 @@
 // TESTS
-// = Habrá que comprobar que no se pued3en introducir números negativos
+// = Habrá que comprobar que no se pueden introducir números negativos
 // = Habrá que comprobar que cuenta bien los números primos que hay entre 1 y n, ej: entre 1 y 100 hay 25 números primos
 // = Si n = 1, deberá decir que no hay números primos
 // = Si n = 10 deberá decir que hay 4 números primos

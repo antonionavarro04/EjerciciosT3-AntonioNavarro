@@ -1,5 +1,5 @@
 // TESTS
-// = Habrá que comprobar que no se pued3en introducir números negativos
+// = Habrá que comprobar que no se pueden introducir números negativos
 // = Si altura = 4 el triangulo deberá ser:    *
 // =                                          * *
 // =                                         * * *

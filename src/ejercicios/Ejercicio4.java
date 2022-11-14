@@ -1,5 +1,5 @@
 // TESTS
-// = Habrá que comprobar que no se pued3en introducir números negativos
+// = Habrá que comprobar que no se pueden introducir números negativos
 // = Si a es 4 y b es 10 el MCD deberá ser 2
 // = Si a es 50 y b es 100 el MCD deberá ser 50
 // = Si a es 15 y b es 70 el MCD deberá ser 5
