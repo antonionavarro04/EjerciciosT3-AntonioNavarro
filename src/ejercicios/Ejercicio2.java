@@ -1,6 +1,9 @@
 // TESTS
 // = Habrá que comprobar que no se pued3en introducir números negativos
 // = Habrá que comprobar que cuenta bien los números primos que hay entre 1 y n, ej: entre 1 y 100 hay 25 números primos
+// = Si n = 1, deberá decir que no hay números primos
+// = Si n = 10 deberá decir que hay 4 números primos
+// = Si n = 100 deberá decir que hay 25 números primos
 
 package ejercicios;
 
@@ -20,7 +23,7 @@ public class Ejercicio2 {
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
-        while (numero < 0) {
+        while (numero < 2) { // * Debe ser entre 1 y n por lo que lo mínimo que puede introducir es 2
             System.out.print("Introduce un número: ");
             numero = read.nextLong(); // ! Pedimos el número al usuario
         } // * Si el número es menor que 0, se volverá a pedir
