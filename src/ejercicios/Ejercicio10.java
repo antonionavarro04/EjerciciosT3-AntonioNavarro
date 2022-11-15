@@ -27,10 +27,10 @@ public class Ejercicio10 {
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
-        while (n <= 0) { // * n debe ser mayor que 0
-            System.out.print("Introduce un numero entero positivo: ");
-            n = read.nextLong(); // ! Pedimos el numero al usuario
-        } // * Repetiremos el bucle hasta que n sea mayor que 0
+        do {
+            System.out.print("Introduce un numero: ");
+            n = read.nextLong(); // ! Pedimos el numero
+        } while (n < 0); // * Comprobamos que no sea negativo
 
         // ! Guardamos el numero original
         numeroOriginal = n;
