@@ -24,7 +24,7 @@ public class Ejercicio9 {
 
         // ! Pedimos el numero al usuario
         do{
-            System.out.println("Introduce el numero: ");
+            System.out.print("Introduce el numero: ");
             n = read.nextLong(); // ! Leemos el numero
         } while (n < 0); // * Comprobamos que el numero sea mayor que 0
 
