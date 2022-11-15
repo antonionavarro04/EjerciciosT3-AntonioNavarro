@@ -20,7 +20,7 @@ public class Ejercicio7 {
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         do{
-            System.out.println("Introduce el numero de filas que quieres que tenga la piramide: ");
+            System.out.print("Introduce el numero de filas que quieres que tenga la piramide: ");
             filasTotales = read.nextLong(); // ! Leemos el numero de filas
         } while (filasTotales < 0); // * Comprobamos que el numero de filas sea mayor que 0
 
