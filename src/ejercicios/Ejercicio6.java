@@ -13,31 +13,31 @@ import java.util.Scanner; import java.util.Locale;
 public class Ejercicio6 {
     public static void main(String[] args) {
         // ? Programa Java el cual pida un número entero N entre 0 y 20, tras eso se imprimiran todos los valores desde 1 hasta n. Cada número se imprimira en una nueva línea y tantas veces diga su valor
-        // ^ Creamos la variable para n
-        byte n = 0;
-
-        // ^ Creamos la variable incremento y veces
-        byte incremento = 1, veces = 1;
-
+        // ^ Creamos la variable para n, incremento y veces
+        byte n, incremento = 1, veces = 1; // * Es de tipo byte porque no puede ser mayor de 20
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
-        while (n < 1 || n > 20) { // * n no puede ser 0 o menos ni mayor que 20
-            System.out.print("Introduce n: ");
+        do {
+            System.out.print("Introduce un número entre 0 y 20: ");
             n = read.nextByte(); // ! Pedimos n al usuario
-        } // * Repetiremos el bucle hasta que n sea mayor que 0 y menor que 20
+        } while (n < 1 || n > 20); // * Repetiremos el bucle mientras n sea menor que 1 o mayor que 20
 
         // ? Salto de Línea Triple
         System.out.println("\n---------------------------------------\n");
 
-        // ! Mediante un bucle while imprimiremos los caracteres
-        while (veces <= n){
-            // ! Mediante un bucle for imprimiremos los caracteres tantas veces el número
-            for (; incremento <= veces; incremento++){ // * Incrementaremos el incremento hasta que sea igual a veces
+        while (veces <= n){ // ! Mediante un bucle while imprimiremos los caracteres
+            while (incremento <= veces){ // ! Mediante un bucle while imprimiremos los caracteres tantas veces el número
                 System.out.print(veces); // * Imprimimos veces ya que es el que contiene el número de la fila
+                incremento++; // * Incrementaremos el incremento hasta que sea igual a veces
             } System.out.println(); // * Cambiamos de Línea
             incremento = 1; // * Reiniciamos el incremento
-            veces++; // * Incrementamos el número de veces a imprimir
+            veces++; // * Incrementaremos las veces hasta que sea igual a n
         }
+
+        // ^ Cerramos el Scanner
+        read.close();
+
+        // € Hecho por Antonio Navarro
     }
 }
