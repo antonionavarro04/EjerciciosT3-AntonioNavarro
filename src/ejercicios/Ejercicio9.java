@@ -14,30 +14,30 @@ public class Ejercicio9 {
     public static void main(String[] args) {
         // ? Programa Java que nos diga cuantos digitos tiene un numero entero positivo introducido por teclado
         // ^ Creamos la variable para n y el contador
-        long n = 0;
+        long n;
 
         // ^ Creamos el contador
-        byte contador = 0;
+        byte digitos = 0; // * Byte ya que por limitación de long el numero no va a tener más de 19 digitos
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         // ! Pedimos el numero al usuario
-        while (n <= 0){
-            System.out.print("Introduce un numero entero positivo: ");
-            n = read.nextLong();
-        }
+        do{
+            System.out.println("Introduce el numero: ");
+            n = read.nextLong(); // ! Leemos el numero
+        } while (n < 0); // * Comprobamos que el numero sea mayor que 0
 
         // ? Salto de Línea Triple
         System.out.println("\n---------------------------------------\n");
 
         while (n > 0){ // ! Mediante un bucle while, dividimos el numero entre 10 hasta que n sea > 0
             n /= 10; // * Dividimos el numero entre 10
-            contador++; // * Incrementamos el contador
+            digitos++; // * Incrementamos el contador
         }
 
         // ! Imprimimos el contador
-        System.out.println("El numero tiene " + contador + " digitos");
+        System.out.println("El numero tiene " + digitos + " digitos");
 
         // ^ Cerramos el Scanner
         read.close();
