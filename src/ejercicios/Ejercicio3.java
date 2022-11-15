@@ -14,8 +14,8 @@ public class Ejercicio3 {
     public static void main(String[] args) {
         // ? Programa que pida un numero al usuario y dibuje un triangulo en funcion de la altura introducida
         // ^ Creamos las variables para la altura y el caracter
-        short altura = -1; // * Es short porque a partir de 1000 de altura no se puede imprimir bien por la consola yy 0 porque se va a comprabar que sea mayor que 0
-        final char CHAR = '*'; // * Es final porque no se va a modificar una vez se le asigne un valor
+        short altura; // * Es short porque a partir de 1000 de altura no se puede imprimir bien por la consola, y un tipo mas grande sería desperdiciar memoria
+        char CHAR; // ? Declaro una variable caracter ya que el usuario puede elegir el caracter con el que pintara la piramide
 
         // ^ Creamos una variable para el retraso
         final short RETRASO; // ? Funcionalidad extra
@@ -23,10 +23,15 @@ public class Ejercicio3 {
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
-        while (altura < 1) { // * Debe ser mayor que 0 por lo que lo mínimo que puede introducir es 1
-            System.out.print("Introduce la altura del triángulo: ");
+        do{
+            System.out.print("Introduce la altura: ");
             altura = read.nextShort(); // ! Pedimos la altura al usuario
-        } // * Si la altura es menor que 0, se volverá a pedir
+        } while (altura < 1); // * Si la altura es menor que 1, se volverá a pedir
+
+        do{
+            System.out.print("Introduce el caracter con el que se dibujará el triángulo: ");
+            CHAR = read.next().charAt(0); // ! Pedimos el caracter al usuario
+        } while (CHAR == ' '); // * Si el caracter es un espacio, se volverá a pedir
 
         // ! Pedimos el retraso al usuario
         System.out.print("Introduce el delay (ms) ([0] para desactivarlo, [10] recomendado): ");
