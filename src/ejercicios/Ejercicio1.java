@@ -12,32 +12,31 @@ public class Ejercicio1 {
     public static void main(String[] args) {
         // ? Programa Java que pide una hora en hh:mm:ss y un incremento en segundos y muestra la hora resultante
         // ^ Creamos las variables para las horas, minutos y segundos, asi como el incremento
-        long horas = -1, minutos = -1, segundos = -1; // ? Las variables las iniciaremos a -1 para uqe el bucle se ejecute al menos una vez
-        long incremento = -1; // * Es final porque no se va a modificar una vez se le asigne un valor
+        long horas, minutos, segundos, incremento;
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         // ! Pedimos la hora, minutos y segundos al usuario
-        while (horas < 0 || horas > 23) {
+        do{
             System.out.print("Introduce la hora: ");
-            horas = read.nextLong();
-        } // * Si la hora es menor que 0 o mayor que 23, se volverá a pedir
+            horas = read.nextLong(); // ! Pedimos la hora al usuario
+        } while (horas < 0 || horas > 23); // * Si la hora es menor que 0 o mayor que 23, se volverá a pedir
 
-        while (minutos < 0 || minutos > 59) {
+        do{
             System.out.print("Introduce los minutos: ");
-            minutos = read.nextLong();
-        } // * Si los minutos son menores que 0 o mayores que 59, se volverá a pedir
+            minutos = read.nextLong(); // ! Pedimos los minutos al usuario
+        } while (minutos < 0 || minutos > 59); // * Si los minutos son menores que 0 o mayores que 59, se volverá a pedi
 
-        while (segundos < 0 || segundos > 59) {
+        do{
             System.out.print("Introduce los segundos: ");
-            segundos = read.nextLong();
-        } // * Si los segundos son menores que 0 o mayores que 59, se volverá a pedir
+            segundos = read.nextLong(); // ! Pedimos los segundos al usuario
+        } while (segundos < 0 || segundos > 59); // * Si los segundos son menores que 0 o mayores que 59, se volverá a pedir
 
-        while (incremento < 0) {
-            System.out.print("Introduce en cuantos segundos quieres incrementar la hora: ");
-            incremento = read.nextLong();
-        } // * Si el incremento es menor que 0, se volverá a pedir
+        do{
+            System.out.print("Introduce el incremento en segundos: ");
+            incremento = read.nextLong(); // ! Pedimos el incremento en segundos al usuario
+        } while (incremento < 0); // * Si el incremento es menor que 0, se volverá a pedir
 
         // ? Salto de Línea Triple
         System.out.println("\n---------------------------------------------------------------\n");
@@ -45,7 +44,7 @@ public class Ejercicio1 {
         // ! Sumamos el incremento a los segundos
         segundos += incremento;
 
-        // ? Lo he hecho mediante whiles porque creo que de esta manera esta mas optimizado, ya que de esta forma no hace tantas comprobaciones dentro del While
+        // ? Lo he hecho mediante whiles porque creo que de esta manera esta mas optimizado, ya que de esta forma no hace tantas comprobaciones dentro del While o del for que si usaramos if's
         while (segundos > 59){ // ! Mediante un bucle while, comprobamos si los segundos son mayores a 59
             segundos -= 60; // * De ser cierto restaremos 60 a los segundos
             minutos++; // * Y sumaremos 1 a los minutos
