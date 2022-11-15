@@ -17,7 +17,7 @@ public class Ejercicio4 {
         long a = 0, b = 0;
 
         // ^ Creamos una variable para el divisor y 2 para los módulos de a y b
-        long divisor, moduloA = -1, moduloB = -1;
+        long divisor, moduloA, moduloB;
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
