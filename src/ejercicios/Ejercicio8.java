@@ -11,11 +11,8 @@ import java.util.Scanner; import java.util.Locale;
 public class Ejercicio8 {
     public static void main(String[] args) {
         // ? Programa Java el cual lea solo los numeros mayores a el anterior introducido, la introduciión de números finaliza con un 0
-        // ^ Creamos la variable para n y nMayor
-        long n, nMayor;
-
-        // ^ Creamos el contador y el contador de fallos
-        int contador = 0, fallos = 0;
+        // ^ Creamos la variable para n, nMayor, contador y el contador de fallos
+        long n, nMayor, contador = 0, fallos = 0;
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         final Scanner read = new Scanner(System.in).useLocale(Locale.US);
