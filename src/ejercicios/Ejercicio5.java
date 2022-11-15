@@ -35,7 +35,7 @@ public class Ejercicio5 {
         System.out.println("\n---------------------------------------\n");
         
         // ! Mediante un operador ternario asignamos el valor de multiplicador
-        multiplicador = (a < b) ? a : b; // * Si a es mayor que b, multiplicador es a, si no, multiplicador es b
+        multiplicador = (a > b) ? a : b; // * Si a es mayor que b, multiplicador es a, si no, multiplicador es b
 
         // ! Igualamos mA y mB a multiplicador
         multiplicadorA = multiplicador; // * Para a
@@ -56,7 +56,10 @@ public class Ejercicio5 {
         }
 
         // ! Imprimimos el MCM
-        System.out.println("El mínimo comun múltiplo de " + a + " y " + b + " es: " + multiplicadorA);
+        System.out.println("El mínimo comun múltiplo de " + a + " y " + b + " es: " + resultadoA);
+        System.out.println(resultadoB);
+        System.out.println(multiplicadorA);
+        System.out.println(multiplicadorB);
 
         // ^ Cerramos el Scanner
         read.close();
