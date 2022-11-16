@@ -46,10 +46,12 @@ public class Ejercicio3 {
             for (int blank = (altura - 1); blank > i; blank--){
                 System.out.print(" "); // * Imprimimos el espacio en blanco
 
-                try { // ? Extra que le he agregado
-                    Thread.sleep(RETRASO);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                if (RETRASO > 0){
+                    try { // ? Extra que le he agregado
+                        Thread.sleep(RETRASO);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
 
@@ -57,11 +59,12 @@ public class Ejercicio3 {
             for (short c = 0; c < i + 1; c++){
                 System.out.print(CHAR); // * Imprimimos el caracter
                 System.out.print(" "); // * Imprimimos el espacio en blanco
-
-                try { // ? Extra que le he agregado
-                    Thread.sleep(RETRASO);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                if (RETRASO > 0){
+                    try { // ? Extra que le he agregado
+                        Thread.sleep(RETRASO);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
             System.out.println(); // * Cambiamos de linea
