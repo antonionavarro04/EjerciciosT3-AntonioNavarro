@@ -14,7 +14,7 @@ public class Ejercicio2 {
     public static void main(String[] args) {
         // ? Programa Java que pida un número n y diga cuantos numeros primos hay entre 1 y n
         // ^ Creamos las variables para el número y el contador, asi como otro número que empezara siendo 2
-        long contadorNoPrimos = 0, numero2 = 2; // ? El número 2 sirve para ir incrementando el número que empieza en 2 y llegar hasta el número n
+        long contadorNoPrimos = 0, numero2; // ? El número 2 sirve para ir incrementando el número que empieza en 2 y llegar hasta el número n
         long numero; // ? El número que introducira el usuario por teclado
         long contadorPrimos = 0; // ^ Crearemos otra variable que sera el contador de primos
 
@@ -30,7 +30,7 @@ public class Ejercicio2 {
         System.out.println("\n---------------------------------------\n");
 
         // ! Mediante un bucle for, comprobamos si el número es primo
-        for (; numero2 < numero ; numero2++) { // * El número 2 es el que se ira incrementando hasta llegar al número n
+        for (numero2 = 2; numero2 < numero ; numero2++) { // * El número 2 es el que se ira incrementando hasta llegar al número n
             for (long i = 2; i < numero2; i++){ // * El bucle for empieza en 2 porque 1 es divisor de todos los números
                 if (numero2 % i == 0){ // * Si el numero es divisible entre i, no es primo
                     contadorNoPrimos++; // * Si el número no es primo, se suma 1 al contador
