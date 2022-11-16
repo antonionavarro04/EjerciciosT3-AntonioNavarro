@@ -33,7 +33,7 @@ public class Ejercicio4 {
         } // * Repetiremos el bucle hasta que b sea mayor que 0
         
         // ? Salto de Línea Triple
-        System.out.println("\n---------------------------------------\n");
+        System.out.println("\n------------------------------------------\n");
 
         // ! Operador ternario para sobrescribir el valor de divisor
         divisor = (a < b) ? a : b; // * Si a es mayor que b, divisor es a, si no, divisor es b
