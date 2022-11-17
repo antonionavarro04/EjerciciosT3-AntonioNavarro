@@ -21,7 +21,7 @@ public class Ejercicio2 {
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
         Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
-        do{ // * Pdeiremos el número en un Bucle Do While, para que se introduzca un valor apropiado
+        do{ // * Pediremos el número en un Bucle Do While, para que se introduzca un valor apropiado
             System.out.print("Introduce un número: ");
             numero = read.nextLong(); // ! Pedimos el número al usuario
         } while (numero < 2); // * Si el número es menor que 2, se volverá a pedir
