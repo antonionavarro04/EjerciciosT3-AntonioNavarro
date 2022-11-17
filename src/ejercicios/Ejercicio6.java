@@ -16,7 +16,7 @@ public class Ejercicio6 {
         // ^ Creamos la variable para n, incremento y veces
         byte n, incremento = 1, veces = 1; // * Es de tipo byte porque no puede ser mayor de 20
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
-        final Scanner read = new Scanner(System.in).useLocale(Locale.US);
+        Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         do {
             System.out.print("Introduce un número entre 0 y 20: ");

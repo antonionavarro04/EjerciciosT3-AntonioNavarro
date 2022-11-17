@@ -18,7 +18,7 @@ public class Ejercicio5 {
         long resultadoA, resultadoB, multiplicadorA = 1, multiplicadorB = 1; // * Las variables multiplicador se iniciaran a 1 para que en la multiplicación empieze desde el 1, ya qeu si el usuario introduce a = 2 y b = 2, el mcm será de 2 ya que son iguales
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
-        final Scanner read = new Scanner(System.in).useLocale(Locale.US);
+        Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         do{
             System.out.print("Introduce el valor de a: ");

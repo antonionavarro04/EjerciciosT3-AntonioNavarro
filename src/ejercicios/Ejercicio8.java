@@ -15,7 +15,7 @@ public class Ejercicio8 {
         long n, nMayor, contador = 0, fallos = 0;
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
-        final Scanner read = new Scanner(System.in).useLocale(Locale.US);
+        Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         // ! Pedimos el numero al usuario
         System.out.print("Introduce un numero inicial: ");

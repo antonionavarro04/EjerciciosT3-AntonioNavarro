@@ -17,7 +17,7 @@ public class Ejercicio7 {
         long filasTotales;
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
-        final Scanner read = new Scanner(System.in).useLocale(Locale.US);
+        Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         do{
             System.out.print("Introduce el numero de filas que quieres que tenga la piramide: ");

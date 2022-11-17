@@ -20,7 +20,7 @@ public class Ejercicio9 {
         byte digitos = 0; // * Byte ya que por limitación de long el numero no va a tener más de 19 digitos
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
-        final Scanner read = new Scanner(System.in).useLocale(Locale.US);
+        Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         // ! Pedimos el numero al usuario
         do{

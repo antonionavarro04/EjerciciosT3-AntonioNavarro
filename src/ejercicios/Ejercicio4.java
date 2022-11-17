@@ -20,7 +20,7 @@ public class Ejercicio4 {
         long divisor, moduloA, moduloB;
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
-        final Scanner read = new Scanner(System.in).useLocale(Locale.US);
+        Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         while(a < 1){ // * a no puede ser 0 o menos
             System.out.print("Introduce a: ");

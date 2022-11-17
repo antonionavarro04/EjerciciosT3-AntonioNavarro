@@ -15,7 +15,7 @@ public class Ejercicio1 {
         long horas, minutos, segundos, incremento;
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
-        final Scanner read = new Scanner(System.in).useLocale(Locale.US);
+        Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         // ! Pedimos la hora, minutos y segundos al usuario
         do{

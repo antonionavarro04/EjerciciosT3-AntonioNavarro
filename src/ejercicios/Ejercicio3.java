@@ -21,7 +21,7 @@ public class Ejercicio3 {
         final short RETRASO; // ? Funcionalidad extra
 
         // ^ Creamos un Scanner en la variable read y cambiamos su formato a US
-        final Scanner read = new Scanner(System.in).useLocale(Locale.US);
+        Scanner read = new Scanner(System.in).useLocale(Locale.US);
 
         do{
             System.out.print("Introduce la altura: ");
